@@ -9,6 +9,8 @@ The build takes a single argument VERSION, which controls the version of protoc 
 
 ## Usage
 
+The image entrypoint is protoc, so just append whatever protoc args you want.
+
 ```bash
-docker run --rm -v ${PWD}:/go/src/project klumhru/proto protoc --workdir /go/src/project -u $(id -u) --go_out=. *.proto
+docker run --rm -v ${PWD}:/go/src/project --workdir /go/src/project -u $(id -u) klumhru/proto --go_out=. *.proto
 ```
