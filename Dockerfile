@@ -1,5 +1,4 @@
 FROM golang:stretch
-ARG VERSION=3.6.1
 
 RUN apt-get update -yqq && apt-get install -yqq \
   autoconf automake libtool curl make g++ unzip \
