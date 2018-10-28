@@ -11,3 +11,5 @@ RUN ./configure
 RUN make -j
 RUN make check install
 RUN go get -u github.com/golang/protobuf/protoc-gen-go
+
+ENTRYPOINT [ "protoc" ]
